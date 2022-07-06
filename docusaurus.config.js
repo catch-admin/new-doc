@@ -41,11 +41,10 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           
           includeCurrentVersion: true,
-          lastVersion: undefined,
+          lastVersion: 'current',
           versions: {
             current: {
               label: '2.6.1',
-              path: '2.6.1',
               banner: 'none',
               badge: true
             },
