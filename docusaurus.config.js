@@ -89,7 +89,7 @@ const config = {
       navbar: {
         title: 'catchadmin',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'catchadmin logo',
           src: 'img/catchadmin.png',
         },
         items: [
@@ -113,6 +113,30 @@ const config = {
             position: 'right',
           }
         ],
+      },
+      algolia: {
+        // Algolia 提供的应用 ID
+        appId: 'Z82AVC6OQ9',
+  
+        //  公开 API 密钥：提交它没有危险
+        apiKey: '3418e43d03b752b8354c9fa5295e4547',
+  
+        indexName: 'catchadmin',
+  
+        // 可选：见下文
+        contextualSearch: true,
+  
+        // 可选：声明哪些域名需要用 window.location 型的导航而不是 history.push。 适用于 Algolia 配置会爬取多个文档站点，而我们想要用 window.location.href 在它们之间跳转时。
+        // externalUrlRegex: 'catchadmin\\.com',
+  
+        // 可选：Algolia 搜索参数
+        searchParameters: {
+        },
+  
+        // 可选：搜索页面的路径，默认启用（可以用 `false` 禁用）
+        searchPagePath: 'search',
+  
+        // ……其他 Algolia 参数
       },
       footer: {
         style: 'dark',
