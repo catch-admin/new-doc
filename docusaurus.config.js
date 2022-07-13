@@ -86,6 +86,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '<a target="_blank" rel="noopener noreferrer" href="https://www.kancloud.cn/akasishikelu/thinkphp6">thinkphp 6.0 企业级后台管理开发&源码分析</a> 有兴趣的可以购买👉',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
       navbar: {
         title: 'catchadmin',
         logo: {
