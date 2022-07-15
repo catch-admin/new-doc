@@ -175,6 +175,10 @@ const config = {
                 to: '/blog',
               },
               {
+                label: '订阅',
+                to: '/blog/rss.xml',
+              },
+              {
                 label: 'GitHub',
                 href: 'https://github.com/jaguarjack/catchadmin',
               },
