@@ -5,6 +5,8 @@ hide_table_of_contents: true
 ---
 
 ## 🎉 赞助名单，排名不分先后
+<div style={{ display: 'flex', 'flex-direction': 'row'}}>
+<div>
 
 | 来源 | 昵称 | 金额 (元)|时间
 | :----: | :----:| :----: | :----: |
@@ -48,3 +50,12 @@ hide_table_of_contents: true
 | 微信 | 小溪流泉映花彩 | 6.99 | 2020/8/12 |
 | 微信 | 三上优雅笔城中 | 18.8 | 2020/8/12 |
 | QQ | 青芒 | 99.0 | 2020/5/-- |
+
+</div>
+<div style={{width: '60%', "text-align": 'center', 'margin-top': '100px'}}>
+<img src="/img/support.jpeg" width = "300" alt="support"/>
+<div style={{width: '100%', 'text-align': 'center' }}>
+如果项目对你有帮助，或者在工作上帮你节省了开发时间。在力所能及的情况下，可以支持下 Catchadmin项目, 非常感谢🙏</div>
+</div>
+</div>
+

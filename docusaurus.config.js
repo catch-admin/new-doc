@@ -68,7 +68,11 @@ const config = {
           blogTitle: 'Catchadmin 博客',
           blogDescription: 'catchadmin 博客用来记录 catchadmin 相关的文章以及开发技巧',
           postsPerPage: 20,
-          blogSidebarTitle: '文章列表'
+          blogSidebarTitle: '文章列表',
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} CatchAdmin, Inc.`,
+          },
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -180,7 +184,7 @@ const config = {
               },
               {
                 label: '订阅',
-                to: '/blog/rss.xml',
+                href: 'https://catchadmin.com/blog/rss.xml',
               },
               {
                 label: 'GitHub',
