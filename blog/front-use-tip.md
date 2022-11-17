@@ -29,6 +29,45 @@ yarn upgrade
 ```
 通过该命令可以升级依赖，然后通过上面的命令继续查看下，如果发现`devDependencies`没有更新的话，可以根据`latest`手动修改版本之后，再执行命令
 ```
-yarn
+yarn install
 ```
 就可以完成项目的依赖升级了
+
+## 代码格式化
+新版前端开发使用的代码格式化的两个`vscode`插件，一个是 `eslint`，另外一个是 `prettier`。在 `vscode` 配置如下
+```json
+// prettier 配置
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+      "editor.formatOnSave": true
+    },
+    "[html]": {
+        "editor.formatOnSave": true
+    },
+    "[css]": {
+        "editor.formatOnSave": true
+    },
+    "[vue]": {
+        "editor.formatOnSave": true
+    },
+    "prettier.semi": false,
+    "prettier.bracketSameLine": true,
+    "prettier.htmlWhitespaceSensitivity": "ignore",
+    "prettier.singleQuote": true,
+    "prettier.singleAttributePerLine": true,
+    "prettier.printWidth": 200,
+    "prettier.jsxSingleQuote": true,
+    "prettier.trailingComma": "none"
+}
+
+// eslint
+```json
+{
+    "editor.formatOnSave": false,
+    //代码保存时，自动执行ESlint格式化代码
+    "editor.codeActionsOnSave": {     
+        "source.fixAll.eslint": true,
+    },
+}
+```
