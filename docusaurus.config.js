@@ -66,8 +66,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           blogTitle: 'Catchadmin 博客',
           blogDescription: 'catchadmin 博客用来记录 catchadmin 相关的文章以及开发技巧',
-          postsPerPage: 500,
-          blogSidebarTitle: '文章列表',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'BLOG 列表',
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} CatchAdmin, Inc.`
