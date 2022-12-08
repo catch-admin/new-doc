@@ -22,6 +22,7 @@ jobs:
           SERVER_IP: ${{ secrets.SERVER_HOST }}
           USERNAME: ${{ secrets.SERVER_USERNAME }}
           DEPLOY_KEY: ${{ secrets.SERVER_SECRET }}
+          ARGS: -avz --delete 
           FOLDER: "./build"
           SERVER_PORT: "22"
           host: ${{ secrets.SERVER_HOST }}
