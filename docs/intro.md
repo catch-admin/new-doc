@@ -115,7 +115,7 @@ composer create-project jaguarjack/catchadmin:dev-master
 ```
 
 ## 体验地址
-[体验地址](http://vue.catchadmin.com)
+[体验地址](https://demo.catchadmin.com)
 - 账号: `catch@admin.com`
 - 密码: `catchadmin`
 
