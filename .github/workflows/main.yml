@@ -26,4 +26,4 @@ jobs:
           SOURCE: "build/"
           SERVER_PORT: "22"
           TARGET: ${{ secrets.SERVER_WORKDIR }}
-          EXCLUDE: "/dist/, /node_modules/"
+          EXCLUDE: "/build/, /node_modules/"
