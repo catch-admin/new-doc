@@ -7,10 +7,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Catchadmin 后台管理框架',
-  tagline: '人生苦短 我选择 catch🤪',
+  tagline: '人生苦短 我选择 Catch🤪',
   url: 'https://catchadmin.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
@@ -107,15 +107,15 @@ const config = {
             position: 'left',
             label: '文档'
           },
-          { to: '/blog', label: '博客', position: 'left' },
+          { to: 'blog', label: '博客', position: 'left' },
           { href: 'https://bbs.catchadmin.com', label: '社区', position: 'left' },
-          { to: '/donate', label: '赞助', position: 'right' },
-          { to: '/customize', label: '技术支持', position: 'right' },
+          { to: 'donate', label: '赞助', position: 'right' },
+          { to: 'customize', label: '技术支持', position: 'right' },
 
           {
             type: 'docsVersionDropdown',
             position: 'right',
-            dropdownItemsAfter: [{ to: '/versions', label: '所有版本' }],
+            dropdownItemsAfter: [{ to: 'versions', label: '所有版本' }],
             dropdownActiveClassDisabled: true
           },
           {
@@ -155,7 +155,7 @@ const config = {
             items: [
               {
                 label: '文档',
-                to: '/docs/2.6.1/intro'
+                to: 'docs/2.6.1/intro'
               }
             ]
           },
@@ -173,7 +173,7 @@ const config = {
             items: [
               {
                 label: '博客',
-                to: '/blog'
+                to: 'blog'
               },
               {
                 label: '订阅',

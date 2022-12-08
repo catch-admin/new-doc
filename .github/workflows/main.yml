@@ -13,7 +13,7 @@ jobs:
       - name: Install and Build
         run: |
           yarn install
-          yarn run build
+          yarn build
 
       - name: Deploy
         uses: AEnterprise/rsync-deploy@v1.0
