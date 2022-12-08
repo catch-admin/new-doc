@@ -22,7 +22,7 @@ jobs:
           SERVER_IP: ${{ secrets.SERVER_HOST }}
           USERNAME: ${{ secrets.SERVER_USERNAME }}
           DEPLOY_KEY: ${{ secrets.SERVER_SECRET }}
-          FOLDER: "./dist"
+          FOLDER: "./build"
           SERVER_PORT: "22"
           host: ${{ secrets.SERVER_HOST }}
           SERVER_DESTINATION: ${{ secrets.SERVER_WORKDIR }}
