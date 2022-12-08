@@ -16,14 +16,14 @@ jobs:
           yarn build
 
       - name: Deploy
-        uses: AEnterprise/rsync-deploy@v1.0
+        uses: easingthemes/ssh-deploy@v2.0.7
         env:
           name: use rsa deploy
-          SERVER_IP: ${{ secrets.SERVER_HOST }}
-          USERNAME: ${{ secrets.SERVER_USERNAME }}
-          DEPLOY_KEY: ${{ secrets.SERVER_SECRET }}
+          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
+          REMOTE_USER: ${{ secrets.SERVER_USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SECRET }}
           ARGS: -avz --delete 
-          FOLDER: "./build"
+          SOURCE: "build/"
           SERVER_PORT: "22"
-          host: ${{ secrets.SERVER_HOST }}
-          SERVER_DESTINATION: ${{ secrets.SERVER_WORKDIR }}
+          TARGET: ${{ secrets.SERVER_WORKDIR }}
+          EXCLUDE: "/dist/, /node_modules/"
