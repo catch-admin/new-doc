@@ -33,7 +33,7 @@ Github Action 使用 `YAML` 格式文件做工作流，所以部署的一系列�
 
 - `action` 每个 `step` 可以依次执行一个或多个命令
 
-整个 yml 文件就是一个一个 job 组成，下面看一下 catchadmin 的文档部署的 workflow
+整个 yml 文件就是一个一个 **job** 组成，下面看一下 **catchadmin** 的文档部署的 **workflow**
 ```yaml
 name: Build and Deploy
 on:
@@ -58,9 +58,9 @@ jobs:
 - 只有一个`job`，运行在虚拟机环境`ubuntu-latest`。
 - 第一步是获取源码，使用的 action 是 `actions/checkout`。
 - 第二步是安装依赖和构建文档
-是不是很简单?
 
-当然这仅仅是在 ubuntu 虚拟机里构建了文档，但需求是要把每次 push 后构建在 ubuntu 虚拟机里的文档上传到自己的服务器。所以这里还差一个步骤。首先在服务器使用 `ssh-keygen` 命令生成私钥和公钥，输入该命令后直接回车就行了，会生成默认的两个文件
+是不是很简单?当然这仅仅是在 ubuntu 虚拟机里构建了文档，但需求是要把每次 push 后构建在 ubuntu 虚拟机里的文档上传到自己的服务器。所以这里还差一个步骤。
+首先在服务器使用 `ssh-keygen` 命令生成私钥和公钥，输入该命令后直接回车就行了，会生成默认的两个文件
 - ~/.ssh/id_rsa 私钥文件，不能泄露
 - ~/.ssh/id_rsa.pub 公钥文件
 
@@ -132,5 +132,5 @@ jobs:
 
 ```
 这样就创建完成了。可以试试 PUSH 到仓库，查看流水线的每个步骤，如下图所示，就可以了。因为服务器在美国，使用的是 `Rsync` 同步文件，可能时间比较长点。
-使用这个服务的时候，腾讯云提醒我高危。
+使用这个服务的时候，腾讯云提醒我高危😄。
 [![zRFlT0.png](https://s1.ax1x.com/2022/12/08/zRFlT0.png)](https://imgse.com/i/zRFlT0)
