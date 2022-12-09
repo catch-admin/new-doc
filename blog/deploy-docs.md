@@ -87,7 +87,7 @@ PubkeyAuthentication yes
 
 ## 配置 Github 相关
 首先找到需要配置的项目，这里说明，下面所说的都是部署到服务器
-[![zRigZq.png](https://s1.ax1x.com/2022/12/08/zRigZq.png)](https://imgse.com/i/zRigZq)
+![zRigZq.png](https://s1.ax1x.com/2022/12/08/zRigZq.png)
 如图，首先找到项目的 Setting，然后找到 Secrets 的 Actions，配置相关服务器变量。本文档主要配置以下几个变量.
 
 - `SERVER_HOST` 服务器 IP 地址
@@ -133,4 +133,4 @@ jobs:
 ```
 这样就创建完成了。可以试试 PUSH 到仓库，查看流水线的每个步骤，如下图所示，就可以了。因为服务器在美国，使用的是 `Rsync` 同步文件，可能时间比较长点。
 使用这个服务的时候，腾讯云提醒我高危😄。
-[![zRFlT0.png](https://s1.ax1x.com/2022/12/08/zRFlT0.png)](https://imgse.com/i/zRFlT0)
+![zRFlT0.png](https://s1.ax1x.com/2022/12/08/zRFlT0.png)
