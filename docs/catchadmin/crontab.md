@@ -35,7 +35,7 @@ class TestCommand extends Command
 [![whg0ud.jpg](https://s1.ax1x.com/2020/09/18/whg0ud.jpg)](https://imgchr.com/i/whg0ud)
 
 ## 调度
-设置每分钟调度一次，注意这里必须是每分钟
+设置每分钟调度一次，注意这里**必须是每分钟**
 ```shell
 * * * * * cd /path-to-your-project && php think catch:schedule >> /dev/null 2>&1
 ```
@@ -77,3 +77,16 @@ class AppService extends ModuleService
  +------------------------- min (0 - 59)
 ```
 调用的任务类设置 `TestTask` 就完成了。感兴趣的话，就赶快试一试吧。
+
+### 常用Crontab表达式示例
+- `*/5 * * * *` 每5分钟执行一次
+- `30 21 * * *` 每晚21:30执行一次
+- `* 12-23 * * *` 下午每分钟执行一次
+- `0 */2 * * *` 每2小时执行一次
+- `* */2 * * *` 偶数小时每分钟执行一次
+- `0 * * * *` 每小时执行一次
+- `0 0 * * *` 每天执行一次
+- `0 0 0 * *` 每月执行一次
+- `0 0 0 0 1` 每个星期一执行一次
+
+cron表达式详细说明 [https://zh.wikipedia.org/wiki/Cron#例子](https://zh.wikipedia.org/wiki/Cron#例子)
