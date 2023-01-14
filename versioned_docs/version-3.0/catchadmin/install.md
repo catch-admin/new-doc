@@ -22,11 +22,13 @@ sidebar_position: 1
 
 
 ## 安装 PHP 项目
-目前项目托管在`gitee`上，可以前往 [CatchAdmin](https://gitee.com/jaguarjack/catchAdmin) 下载。
+目前项目托管在`github`上，可以前往 [CatchAdmin](https://github.com/JaguarJack/catch-admin) 下载。
 或者可以使用`git`(推荐使用) clone 代码，方便及时更新代码。
 ```sh
-git clone https://gitee.com/jaguarjack/catchAdmin.git
+git clone https://github.com/JaguarJack/catch-admin.git
 ```
+当然你也可以使用 [Gitee](https://gitee.com/jaguarjack/catchAdmin), 有可能会同步不及时。
+
 
 进入到`CatchAdmin`目录，该项目不提供`Web install`方式，请使用命令行方式安装。使用以下几个命令即可安装成功。
 保证已经保证了`composer`包管理器。`MAC`以及`LINUX`可使用下面的命令, `windows`直接下载`exe`安装
