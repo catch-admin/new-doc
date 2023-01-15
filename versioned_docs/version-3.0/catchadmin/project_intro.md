@@ -2,7 +2,11 @@
 sidebar_position: 2
 ---
 # 项目介绍
-`Catchcadmin` V3 版本改动非常大，使用 Laravel9.X 最新版版本，Vue3+ElementPlus 组合，在代码组织上，放弃了两个项目独立，将他们组合到一块，这样更方便模块式开发。
+`Catchcadmin` V3 版本改动非常大，使用 Laravel9.X 最新版版本，Vue3+ElementPlus 组合，在代码组织上，放弃了两个项目独立，将他们组合到一块，这样更方便模块式开发。但是如果想开发的顺畅一点，首先需要了解以下几个相关的技术
+- typescript
+- vue3
+- tailwindcss（css 组件库）
+- Laravel （之前使用 tp6 的话，用起来应该没有压力）
 ### 目录结构
 `Catchadmin` V3 版本服务端和前端放在一个项目中，这样会更方便开发。
 ```
