@@ -30,10 +30,9 @@ php artisan catch:install:module <module>
 - Providers 这个非常重要，和 Laravel Package 差不多，路由，commands，config 都是需要从这里载入
 - route.php 路由文件
 
-着重看下 Provider 
+这里着重看下 `Provider`
 
 ```php
-
 namespace Modules\Test\Providers;
 
 use Catch\CatchAdmin;
