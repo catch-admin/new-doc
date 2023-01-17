@@ -26,7 +26,6 @@ export const Checkedbox = ({children, color}) => (
 ## 项目地址
 - [github 地址](https://github.com/jaguarjack/catch-admin)
 - [gitee 地址](https://gitee.com/jaguarjack/catchAdmin)
-- [前端 Vue 项目地址](https://github.com/jaguarjack/catch-admin-vue)
 
 ## 预览
 ![zRrjNd.png](https://s1.ax1x.com/2022/12/09/zRrjNd.png)
@@ -54,6 +53,7 @@ export const Checkedbox = ({children, color}) => (
 > 排名不分先后
 
 - [Laravel](https://laravel.com)
-- [element-plus](https://element-plus.org)
-- [docusaurus](https://docusaurus.com)
+- [Vue](https://cn.vuejs.org/)
+- [ElementPlus](https://element-plus.org)
+- [Docusaurus](https://docusaurus.com)
 - [JetBrains](https://www.jetbrains.com/)
