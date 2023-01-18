@@ -31,7 +31,7 @@ git clone https://github.com/JaguarJack/catch-admin.git
 
 
 进入到`CatchAdmin`目录，该项目不提供`Web install`方式，请使用命令行方式安装。使用以下几个命令即可安装成功。
-保证已经保证了`composer`包管理器。`MAC`以及`LINUX`可使用下面的命令, `windows`直接下载`exe`安装
+保证已经安装了`composer`包管理器。`Mac OS`以及`Linux`可使用下面的命令, `windows`直接下载`exe`安装
 
 ```shell
 curl -sS http://install.phpcomposer.com/installer | php
@@ -69,7 +69,7 @@ vue 后台使用了是 `element Plus` [文档地址](https://element-plus.org)
 ENV = 'production'
 
 # base api
-VUE_APP_BASE_API = '正式环境的 API 地址'
+VITE_BASE_URL = '正式环境的 API 地址'
 ```
 然后进行打包
 ```

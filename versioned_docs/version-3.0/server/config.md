@@ -124,24 +124,24 @@ return [
 
 - `super_admin` 配置 **super admin** 的 **ID**，默认 1
 
-- module 模块相关配置
-    - root 配置模块的根目录
-    - namespace 模块根命名控件
-    - default 默认模块，初始化 `develop`, `use`, `common` 三个模块
-    - default_dirs 默认生成默认的目录
-    - driver 模块配置驱动 默认是 file
-    - routes 模块路由集合
+- `module` 模块相关配置
+    - `root` 配置模块的根目录
+    - `namespace` 模块根命名空间
+    - `default` 默认模块，初始化 `develop`, `use`, `common` 三个模块
+    - `default_dirs` 默认生成默认的目录
+    - `driver` 模块配置驱动 默认是 file
+    - `routes` 模块路由集合
 
-- response 响应配置
-    - always_json 响应输出 Json
-    - request_handled_listener 响应数据格式配置
-- auth 认证相关配置
+- `response` 响应配置
+    - `always_json` 响应输出 `Json`
+    - `request_handled_listener `响应数据格式配置
+- `auth` 认证相关配置
 
-- listen_db_log 是否监听 DB SQL
+- `listen_db_log` 是否监听 **DB SQL**
 
-- route 路由配置
-    - prefix 路由前缀
-    - middlewares 路由默认路由
+- `route` 路由配置
+    - `prefix` 路由前缀
+    - `middlewares` 路由默认路由
 
 项目有定制需求，一定要看看这些配置。
 

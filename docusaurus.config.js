@@ -54,7 +54,7 @@ const config = {
             '3.0': {
               label: '3.0',
               path: '3.0',
-              banner: 'unreleased',
+              banner: 'none',
               badge: true
             }
           },
