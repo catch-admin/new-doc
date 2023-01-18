@@ -189,7 +189,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} catchadmin 后台管理框架 ｜ <a href="http://beian.miit.gov.cn/">苏ICP备19073956号-1</a>`
       },
       prism: {
-        theme: darkCodeTheme,
+        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
         additionalLanguages: ['php']
       }
