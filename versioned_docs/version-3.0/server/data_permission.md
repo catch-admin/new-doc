@@ -21,7 +21,7 @@ sidebar_position: 6
 
 完成以上两步，使用上就非常简单，但必须是`权限模块`开启的情况，并且使用权限模块。因为数据权限是和角色强绑定的。
 
-```php
+```php title="modules/Permissions/Models/Traits/DataRange.php"
 use Modules\Permissions\Models\Traits\DataRange;
 
 Class AnyModel extends CatchModel

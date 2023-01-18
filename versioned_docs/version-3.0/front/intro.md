@@ -13,7 +13,7 @@ sidebar_position: 1
 ## vite 配置
 这里就直接用项目的配置一一说明了，不拆开来看了
 
-```js
+```js title="vite.config.js"
 // rootPath 项目根目录
 const rootPath = resolve(__dirname)
 

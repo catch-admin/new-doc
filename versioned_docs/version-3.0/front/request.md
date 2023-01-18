@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # 请求
 前端请求默认使用的是 `axios`，但是为了方便，后台提供了 `Http` 对象快速发起请求
-```typescript
+```typescript title="resource/admin/support/http.ts"
 import Http from '/admin/support/http'
 
 // GET 请求

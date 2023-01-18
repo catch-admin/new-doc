@@ -5,7 +5,7 @@ sidebar_position: 2
 # 入口
 前端项目放置在 `resource/admin` 目录，关于 admin 各个目录的作用就不做多介绍了，可以到[项目介绍](/docs/3.0/catchadmin/project_intro)中查看。`app.ts` 即项目的入口
 
-```javascript
+```javascript title="resource/admin/app.ts"
 import '/admin/styles/index.scss'
 
 import CatchAdmin from './support/catchAdmin'
@@ -17,7 +17,7 @@ const admin = new CatchAdmin()
 admin.bootstrap()
 ```
 进入到 `CatchAdmin` 对象中，可以看到项目引入了哪些全局组件
-```javascript
+```javascript title="resource/admin/support/catchAdmin.ts"
 import { createApp } from 'vue'
 import type { App as app } from 'vue'
 import App from '/admin/App.vue'

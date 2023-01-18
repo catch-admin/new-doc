@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # 配置
 首先先了解`catchadmin` 的相关配置
-```php
+```php title="config/catch.php"
 return [
     /*
     |--------------------------------------------------------------------------

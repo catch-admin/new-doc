@@ -20,7 +20,7 @@ php artisan catch:module:install permissions
 
 ### 中间件
 权限模块提供了权限控制的中间件，如下
-```php
+```php title="modules/Permissions/Middlewares/PermissionGate.php"
 class PermissionGate
 {
     public function handle(Request $request, \Closure $next)

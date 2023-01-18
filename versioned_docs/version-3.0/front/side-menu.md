@@ -14,7 +14,7 @@ sidebar_position: 3
 ## 类型
 对于权限和菜单,系统定义了两种类型，查看 `resource/admin/types`
 ### 权限类型
-```typescript
+```js title="resource/admin/types/Permissions.ts"
 export interface Permission {
   id: number // id
   parent_id: number // 父级 ID
@@ -33,7 +33,7 @@ export interface Permission {
 ```
 ### 菜单类型
 菜单类型，最终都是由权限类型转换而来，所以一旦是动态生成的路由，那么元数据都是由菜单数据提供
-```typescript
+```js title="resource/admin/types/Menu.ts"
 import { Component } from 'vue'
 import { RouteRecordRaw } from 'vue-router'
 
@@ -62,7 +62,7 @@ export interface Menu extends Omit<RouteRecordRaw, 'meta'> {
 }
 ```
 在了解完这两个相关类型之后，再来看动态菜单和权限如何实现的，静态菜单就不做介绍了。首先找到`resource/admin/route/guard/index.ts` 文件，从这里开始，这里是路由导航守卫。下面直接通过代码来注解如何实现
-```typescript
+```js title="resource/admin/route/guard/index.ts"
 const guard = (router: Router) => {
   // white list
   const whiteList: string[] = [WhiteListPage.LOGIN_PATH, WhiteListPage.NOT_FOUND_PATH]
@@ -128,11 +128,11 @@ export default guard
 ```
 ## 侧边栏
 上面经过路由导航守卫之后，动态权限就已经转化为动态菜单了。主要通过这个方法来实现转换
-```typescript
+```js
 const asyncRoutes = permissionStore.getAsyncMenusFrom(toRaw(userStore.getPermissions))
 ```
 这里就不细说里面的实现了，是通过递归实现无限极菜单。但是这里一个非常重要的点，就是权限是通过`pinia` 进行保存的，因为 `pinia` 是响应式的。找到 `resource/admin/store/user/permissions.ts`，看下 `permissionStore` 的定义
-```typescript
+```js title="resource/admin/store/user/permissions.ts"
 interface Permissions {
   menus: Menu[] // 菜单
 

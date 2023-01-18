@@ -28,7 +28,7 @@ sidebar_position: 3
 ```
 ![pS3JQy9.png](https://s1.ax1x.com/2023/01/18/pS3JQy9.png)
 采用的是传统的双栏布局，即左侧是 **Sider** 右侧是内容。可以从 `layout/index.vue` 看出布局
-```html
+```html title="resource/admin/layout/index.vue"
 <template>
   <div class="w-full flex" ref="el">
     <!--- Sider  -->
@@ -39,7 +39,7 @@ sidebar_position: 3
 </template>
 ```
 内容区域分为`Header` 和 `router-view`，可以在 `layout/components/content.vue` 中
-```html
+```html title="resource/admin/layout/components/content.vue"
 <template>
   <div :class="'w-full h-screen flex flex-col transition-spacing duration-300 ease-linear overflow-hidden ' + mlClass">
     <Header />
@@ -52,7 +52,7 @@ sidebar_position: 3
 </script>
 ```
 所以当在 `vue router` 使用 `Layout` 组件是，组件的内容便会展示在 `layout` 内容组件的 `router-view` 中。譬如说
-```javascript
+```javascript title="resource/layout/index.ts"
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import type { App } from 'vue'
 export const constantRoutes: RouteRecordRaw[] = [
