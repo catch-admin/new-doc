@@ -40,10 +40,9 @@ use Catch\Providers\CatchModuleServiceProvider;
 
 class TestServiceProvider extends CatchModuleServiceProvider
 {
-    public function routePath(): string|array
+    public function moduleName(): string|array
     {
-        // TODO: Implement path() method.
-        return CatchAdmin::getModuleRoutePath('test');
+        return 'common';
     }
 }
 ```

@@ -143,6 +143,39 @@ return [
     - `prefix` 路由前缀
     - `middlewares` 路由默认路由
 
-项目有定制需求，一定要看看这些配置。
+项目有定制需求，一定要看看这些配置
+
+## 模块配置
+除了整个系统的配置以外，系统还提供了模块化的配置，模块的配置也是相互独立的。如果模块需要配置，那么可以直接在模块目录下添加 `config` 目录，系统会自动加载配置文件。当然非要客制化下，也没问题。只需要在模块的`Provider` 下实现 `configPath` 这个方法即可
+```php title="modules/Test/Providers/TestServiceProvider"
+namespace Modules\Test\Providers;
+
+use Catch\CatchAdmin;
+use Catch\Providers\CatchModuleServiceProvider;
+
+class TestServiceProvider extends CatchModuleServiceProvider
+{
+    public function confitPath(): string
+    {
+        return config_path;
+    }
+}
+```
+最终模块的配置如下结构
+- Permissions
+    - config
+        - one.php
+        - two.php
+
+那么如何获取呢？按照 `Laravel` 的模式应该是 
+```php
+config('one')
+```     
+获取配置内容，但是因为是模块化独立的，所以获取上一定要加入模块的名称，最终应该是这么获取
+```php
+config('permissions.one.some_key')
+```
+
+       
 
 
