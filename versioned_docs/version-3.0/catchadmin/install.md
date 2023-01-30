@@ -23,11 +23,11 @@ sidebar_position: 1
 ## 安装
 ### 准备
 安装之前首先准备几个必要的工具
-[git 代码管理](https://git-scm.com/downloads)
-[composer PHP 包管理器](https://getcomposer.org/download/)
-[nodejs](https://nodejs.org/zh-cn/)
-[yarn 前端包管理器](https://yarn.bootcss.com/)
-[vite](https://cn.vitejs.dev/)
+- [git 代码管理](https://git-scm.com/downloads)
+- [composer PHP 包管理器](https://getcomposer.org/download/)
+- [nodejs](https://nodejs.org/zh-cn/)
+- [yarn 前端包管理器](https://yarn.bootcss.com/)
+- [vite](https://cn.vitejs.dev/)
 
 ### 安装 PHP 项目
 目前项目托管在`github`上，可以前往 [CatchAdmin](https://github.com/JaguarJack/catch-admin) 下载。
@@ -109,5 +109,45 @@ http {
 
 
     include /etc/nginx/conf.d/*.conf;
+}
+```
+
+### 项目部署配置
+```js
+server
+{
+    listen  443  ssl http2;
+    server_name catchadmin.com;
+    index admin.html index.html index.php index.htm default.php default.htm default.html;
+    root root_path;
+
+    ssl_certificate     pem_path;  # pem文件的路径
+    ssl_certificate_key  key_path; # key文件的路径
+    ssl_session_timeout  5m;    #缓存有效期
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+
+    location /api {
+       if (!-e $request_filename) {
+        rewrite  ^(.*)$  /index.php?s=/$1  last;
+        break;
+      }
+    }
+
+   location / {
+     root admin_root_path;
+     try_files $uri $uri/ /admin.html;
+   }
+
+   # PHP 支持
+    location ~ \.php$ {
+        try_files $uri /index.php =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass v3:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
 }
 ```
