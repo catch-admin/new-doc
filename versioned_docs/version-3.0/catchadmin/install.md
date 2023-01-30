@@ -20,8 +20,16 @@ sidebar_position: 1
 - NGINX
 - Mysql
 
+## 安装
+### 准备
+安装之前首先准备几个必要的工具
+[git 代码管理](https://git-scm.com/downloads)
+[composer PHP 包管理器](https://getcomposer.org/download/)
+[nodejs](https://nodejs.org/zh-cn/)
+[yarn 前端包管理器](https://yarn.bootcss.com/)
+[vite](https://cn.vitejs.dev/)
 
-## 安装 PHP 项目
+### 安装 PHP 项目
 目前项目托管在`github`上，可以前往 [CatchAdmin](https://github.com/JaguarJack/catch-admin) 下载。
 或者可以使用`git`(推荐使用) clone 代码，方便及时更新代码。
 ```sh
@@ -34,8 +42,6 @@ git clone https://github.com/JaguarJack/catch-admin.git
 保证已经安装了`composer`包管理器。`Mac OS`以及`Linux`可使用下面的命令, `windows`直接下载`exe`安装
 
 ```shell
-curl -sS http://install.phpcomposer.com/installer | php
-
 // 安装 composer 扩展
 composer install --ignore-platform-reqs
 
@@ -62,12 +68,9 @@ vue 后台使用了是 `element Plus` [文档地址](https://element-plus.org)
 :::
 
 
-## 打包前端项目
+### 打包前端项目
 打包前请先配置正是环境 API 地址。在项目的根目录下的`.env.production`文件配置
 ```
-# just a flag
-ENV = 'production'
-
 # base api
 VITE_BASE_URL = '正式环境的 API 地址'
 ```
