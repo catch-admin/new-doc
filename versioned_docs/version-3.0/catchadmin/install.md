@@ -5,20 +5,9 @@ sidebar_position: 1
 # 项目安装
 
 ## 环境要求
-- PHP >= 8.1+ (需以下扩展)
-  - BCMath
-  - Ctype
-  - DOM
-  - Fileinfo
-  - JSON
-  - Mbstring
-  - OpenSSL
-  - PCRE
-  - PDO
-  - Tokenizer
-  - XML
-- NGINX
-- Mysql
+- PHP >= 8.1+
+- Nginx
+- Mysql >= 5.7
 
 ## 安装
 ### 准备
