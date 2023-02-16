@@ -28,11 +28,10 @@ export const Checkedbox = ({children, color}) => (
 - [gitee 地址](https://gitee.com/jaguarjack/catchAdmin)
 
 ## 预览
-![zRrjNd.png](https://s1.ax1x.com/2022/12/09/zRrjNd.png)
-![zRsAEQ.png](https://s1.ax1x.com/2022/12/09/zRsAEQ.png)
-![zRsUv6.png](https://s1.ax1x.com/2022/12/09/zRsUv6.png)
-![zRsV4s.png](https://s1.ax1x.com/2022/12/09/zRsV4s.png)
-
+![zRrjNd.png](https://i.imgtg.com/2023/02/16/dASpg.png)
+![zRsAEQ.png](https://i.imgtg.com/2023/02/16/dAsKK.png)
+![zRsUv6.png](https://i.imgtg.com/2023/02/16/dA0fB.png)
+![zRsV4s.png](https://i.imgtg.com/2023/02/16/dAd5s.png)
 
 ## 体验地址
 [demo 地址](https://v3.catchadmin.com)
