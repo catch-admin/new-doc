@@ -46,19 +46,19 @@ const config = {
           includeCurrentVersion: true,
           lastVersion: 'current',
           versions: {
-            current: {
-              label: '2.6.1',
-              banner: 'none',
-              badge: true
-            },
             '3.0': {
               label: '3.0',
               path: '3.0',
               banner: 'none',
               badge: true
+            },
+            current: {
+              label: '2.6.1',
+              banner: 'none',
+              badge: true
             }
           },
-          onlyIncludeVersions: ['current', '3.0']
+          onlyIncludeVersions: ['3.0', 'current']
         },
         blog: {
           showReadingTime: true,

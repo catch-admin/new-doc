@@ -55,3 +55,6 @@ sidebar_position: 2
 这里可以先熟悉目录结构，在后续将介绍系统内具体的一些方法和配置。
 
 和之前 2.x 相比，最大的变化就是将核心目录已经独立出去，使用单独的 `composer` 加载，如果遇到任何问题或者 bug 可以到[catchadmin/core](https://github.com/catch-admin/core)仓库提交 issue！
+
+## 视频介绍
+[catchadmin 新版本安装](https://www.bilibili.com/video/BV1eY411v71J/)

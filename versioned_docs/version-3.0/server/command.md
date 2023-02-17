@@ -7,6 +7,12 @@ sidebar_position: 10
 ```shell
 php artisan | grep catch
 ```
+
+### 查看版本号
+```shell
+php artisan catch:version
+```
+
 ### 项目安装
 ```shell
 php artisan catch:install
@@ -61,3 +67,29 @@ php artisan catch:export:menu <module> <table?>
 ```php 
 php artisan catch:export:menu permissions
 ```
+
+### 生成模型
+```shell
+php artisan catch:make:model <module> <modelName> <table?>
+```
+生成模型文件
+```shell
+php artisan catch:make:model permissions Users
+```
+内容如下
+```php
+namespace Modules\Permissions\Models;
+
+use Catch\Base\CatchModel as Model;
+
+class Users extends Model
+{
+    protected $table = 'users';
+
+    protected $fillable = [
+        'id', 'username', 'password', 'email', 'avatar', 'remember_token', 'department_id', 'creator_id', 'status', 'login_ip', 'login_at', 'created_at', 'updated_at', 'deleted_at', 
+    ];
+
+}
+```
+
