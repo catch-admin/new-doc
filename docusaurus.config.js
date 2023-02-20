@@ -41,7 +41,7 @@ const config = {
           sidebarCollapsed: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/catch-admin/new-doc',
+          editUrl: 'https://github.com/catch-admin/new-doc/tree/master',
 
           includeCurrentVersion: true,
           lastVersion: 'current',
