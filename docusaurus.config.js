@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Catchadmin 后台管理框架',
+  title: 'Catchadmin 后台管理框架-技术分享',
   tagline: '人生苦短 我选择 Catch🤪',
   url: 'https://catchadmin.com',
   baseUrl: '/',
