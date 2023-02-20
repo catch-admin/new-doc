@@ -8,7 +8,7 @@ sidebar_position: 3
 ### 模块如何工作
 模块通常是存放在**modules**目录下的，需要通过以下命令来运行以下命令
 ```shell
-php artisan catch:install:module <module>
+php artisan catch:module:install <module>
 ```
 运行完成之后，会在 `storage/app` 下，生成 `module.json`，在该文件里可以看到模块相关的信息。如果是从 2.x 版本过渡到 3.x 的，那么应该很了解这个概念。和之前并无太大差别，当然`Laravel`社区早就有了这种概念。
 ![模块架构图](https://z3.ax1x.com/2021/04/26/gSrLz6.png)
