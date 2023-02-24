@@ -93,3 +93,24 @@ class Users extends Model
 }
 ```
 
+:::info
+添加非常有用的三个指令，这三个指令会分离前后端路由，从而加速应用的访问速度
+:::
+
+### 路由缓存
+```shell
+php artisan catch:route:cache
+``` 
+这个命令会将前后台路由分开缓存
+### 路由缓存清理
+```shell
+php artisan catch:route:clear
+```
+
+### 路由列表
+```shell
+php artisan catch:route:list
+```
+- 可选项 --app
+
+默认查看`后台`应用的路由，即`modules`目录下的应用。
