@@ -11,7 +11,7 @@ sidebar_position: 1
 
 ## 安装
 ### 准备
-安装之前首先准备几个必要的工具
+在安装这个软件之前，您需要准备一些必要的工具，包括：
 - [git 代码管理](https://git-scm.com/downloads)
 - [composer PHP 包管理器](https://getcomposer.org/download/)
 - [nodejs](https://nodejs.org/zh-cn/)
@@ -19,24 +19,36 @@ sidebar_position: 1
 - [vite](https://cn.vitejs.dev/)
 
 ### 安装 PHP 项目
-目前项目托管在`github`上，可以前往 [CatchAdmin](https://github.com/JaguarJack/catch-admin) 下载。
-或者可以使用`git`(推荐使用) clone 代码，方便及时更新代码。
+接下来，您需要下载 CatchAdmin 项目。您可以前往该项目在 [CatchAdmin](https://github.com/JaguarJack/catch-admin) 上的页面进行下载，也可以使用 `git` clone 命令将代码克隆到本地，这样就能及时获取代码更新。
 ```sh
 git clone https://github.com/JaguarJack/catch-admin.git
 ```
 当然你也可以使用 [Gitee](https://gitee.com/jaguarjack/catchAdmin), 有可能会同步不及时。
 
+请注意，该项目不提供 Web 安装方式，因此您需要使用命令行方式进行安装。在安装之前，请确保已经安装了 composer 包管理器。如果您使用的是 Mac OS 或者 Linux，可以在终端输入以下命令安装 composer：
+```shell
+// mac os
+brew install composer
 
-进入到`CatchAdmin`目录，该项目不提供`Web install`方式，请使用命令行方式安装。使用以下几个命令即可安装成功。
-保证已经安装了`composer`包管理器。`Mac OS`以及`Linux`可使用下面的命令, `windows`直接下载`exe`安装
+// linux
+sudo apt-get install composer
+```
+如果您使用的是 Windows 系统，可以从 [composer](https://docs.phpcomposer.com/) 的官方网站下载 exe 安装文件进行安装。一旦您已经安装了 `composer`，接下来您可以进入 `CatchAdmin` 项目所在的目录，并运行以下命令进行安装：
+```shell
+composer install
+```
+这个命令会自动下载并安装`CatchAdmin`项目所需要的 PHP 包。
+除了 PHP 包之外，该项目还需要一些前端包。您可以使用以下命令安装这些包：
 
 ```shell
-// 安装 composer 扩展
-composer install --ignore-platform-reqs
+// 安装完 nodejs 之后，再安装 yarn
+npm install --global yarn
 
-// 安装前端依赖
+// 安装完成之后，使用
 yarn install
-
+```
+这样就可以安装所有需要的依赖包了。依赖安装完成之后，还需要安装项目的基本信息，如下
+```shell
 // 安装后台, 按照提示输入对应信息即可
 php artisan catch:install
 

@@ -2,7 +2,8 @@
 sidebar_position: 2
 ---
 # 项目介绍
-`Catchcadmin` V3 版本改动非常大，使用 Laravel9.X 最新版版本，Vue3+ElementPlus 组合，在代码组织上，放弃了两个项目独立，将他们组合到一块，这样更方便模块式开发。但是如果想开发的顺畅一点，首先需要了解以下几个相关的技术
+Catchcadmin V3 是一个开源的后台管理系统，它提供了一组完整的解决方案，可以帮助开发者快速构建各种类型的管理后台，例如 CMS、ERP、CRM、OA 等。Catchcadmin V3 版本的改动非常大，它采用了 Laravel 10.X、Vue3 和 ElementPlus 等最新的技术，以及更加优秀的代码组织方式，以更好地满足开发者的需求。
+
 - typescript
 - vue3
 - tailwindcss（css 组件库）
