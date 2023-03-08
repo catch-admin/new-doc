@@ -23,6 +23,9 @@ export const Checkedbox = ({children, color}) => (
 - <Checkedbox/> Schema 管理 生成表结构 
 - <Checkedbox/> 模块管理 系统模块管理
 
+## 额外模块
+- [CMS 模块](https://github.com/catch-admin/cms)
+
 ## 项目地址
 - [github 地址](https://github.com/jaguarjack/catch-admin)
 - [gitee 地址](https://gitee.com/jaguarjack/catchAdmin)
