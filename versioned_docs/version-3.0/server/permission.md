@@ -52,7 +52,7 @@ class PermissionGate
 - **菜单** 菜单就是主要的页面
 - **按钮** 每个页面的操作，每个按钮都对应后端的控制的一个 `action`，这个非常重要
 
-- 路由Paht 对应前端 `vue` 路由的 `path`
+- 路由 `Path` 对应前端 `vue` 路由的 `path`
 - 组件 对应前端 `vue` 路由的 `component`
     - 目录类型一般都是选择 Layout 组件
     - 菜单类型则是选择对应页面的组件
