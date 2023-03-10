@@ -5,6 +5,8 @@ hide_table_of_contents: true
 ---
 
 ## 🎉 赞助名单，排名不分先后
+<div style={{"text-align": "center", width: "50%", margin: "auto",display: '-webkit-flex',display: 'flex', }}>
+<div>
 
 | 来源 | 昵称 | 金额 (元)|时间
 | :----: | :----:| :----: | :----: |
@@ -48,4 +50,11 @@ hide_table_of_contents: true
 | 微信 | 小溪流泉映花彩 | 6.99 | 2020/8/12 |
 | 微信 | 三上优雅笔城中 | 18.8 | 2020/8/12 |
 | QQ | 青芒 | 99.0 | 2020/5/-- |
+
+</div>
+<div style={{ "margin-top" : "30%", "margin-left": "100px"}}>
+    <img src="/img/support.jpeg" width = "200" alt="support"/>
+    <div style={{"text-align": "center"}}>微信</div>
+</div>
+</div>
 
