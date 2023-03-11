@@ -45,3 +45,21 @@ app.directive('permission', (el, binding) => {
   <el-button v-permission="user@user@store">创建权限</el-button>
 </template>
 ```
+
+## 权限指令
+权限指令是使用 `vue`的 `directive` 实现一个前端操作控制的指令，例如新增，更新等等操作。如果你需要页面级别的权限操作，那么这个指令可以很好的帮助你实现该功能
+
+例如控制权限模块的角色更新功能，你可以使用 `v-action` 进行控制，如果登录人员没有改操作权限，那么此操作按钮将不再页面展示。
+```javascript
+<Update @click="openRoleForm(scope.row.id, scope.row.permissions)" v-action="'permissions.role.update'"/>
+```
+
+权限指令要求的格式和后端相似，格式如下
+```javascript
+module.controller.action
+
+or
+
+module@controller@action
+```
+
