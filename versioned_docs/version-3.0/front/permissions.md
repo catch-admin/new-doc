@@ -7,11 +7,26 @@ sidebar_position: 4
 ```typescript
 const userHasPermissions = userStore.getPermissions
 ```
-用户的所有权限有了之后，就可以通过自定义指令[vue 指令](https://cn.vuejs.org/guide/reusability/custom-directives.html) 定义权限指令
-:::warning
-目前后台还未实现该指令，用户可以自己实现
-:::
 
+
+## 权限指令
+权限指令是使用 `vue`的 `directive` 实现一个前端操作控制的指令，例如新增，更新等等操作。如果你需要页面级别的权限操作，那么这个指令可以很好的帮助你实现该功能
+
+例如控制权限模块的角色更新功能，你可以使用 `v-action` 进行控制，如果登录人员没有改操作权限，那么此操作按钮将不再页面展示。
+```javascript
+<Update @click="openRoleForm(scope.row.id, scope.row.permissions)" v-action="'permissions.role.update'"/>
+```
+
+权限指令要求的格式和后端相似，格式如下
+```javascript
+module.controller.action
+
+or
+
+module@controller@action
+```
+
+### 实现方案
 众所周知，后端是模块的，为了防止模块之间的路由会发生冲突，所以权限标识是由**模块** + **controller@action** 组合
 :::info
 后端路由即 controller@action，权限标识也是这样定义
@@ -45,21 +60,5 @@ app.directive('permission', (el, binding) => {
   <el-button v-permission="user@user@store">创建权限</el-button>
 </template>
 ```
-
-## 权限指令
-权限指令是使用 `vue`的 `directive` 实现一个前端操作控制的指令，例如新增，更新等等操作。如果你需要页面级别的权限操作，那么这个指令可以很好的帮助你实现该功能
-
-例如控制权限模块的角色更新功能，你可以使用 `v-action` 进行控制，如果登录人员没有改操作权限，那么此操作按钮将不再页面展示。
-```javascript
-<Update @click="openRoleForm(scope.row.id, scope.row.permissions)" v-action="'permissions.role.update'"/>
-```
-
-权限指令要求的格式和后端相似，格式如下
-```javascript
-module.controller.action
-
-or
-
-module@controller@action
-```
+具体实现可到前端项目的`directives`目录下的 action 查看
 
