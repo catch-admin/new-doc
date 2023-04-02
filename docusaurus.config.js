@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Catchadmin 后台管理框架-技术分享',
+  title: 'Catchadmin 后台管理框架',
   tagline: '人生苦短 我选择 Catch🤪',
   url: 'https://catchadmin.com',
   baseUrl: '/',
@@ -109,10 +109,9 @@ const config = {
           },
           { to: 'blog', label: '博客', position: 'left' },
           { href: 'https://bbs.catchadmin.com', label: '社区', position: 'left' },
-          { to: 'donate', label: '赞助', position: 'right' },
+          { to: 'customize', label: '合作', position: 'right' },
           { to: 'video', label: '视频教程', position: 'right' },
-          // { to: 'customize', label: '技术支持', position: 'right' },
-
+          { to: 'donate', label: '赞助', position: 'right' },
           {
             type: 'docsVersionDropdown',
             position: 'right',
