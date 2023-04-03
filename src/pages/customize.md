@@ -30,4 +30,4 @@ hide_table_of_contents: true
 
 ## 申请技术支持
 需要技术支持的开发者，请扫描下方二维码加作者微信，备注 "技术支持"
-<img src="./img/support.jpeg" width="200" />
+<img src="./img/personal.jpeg" width="200" />
