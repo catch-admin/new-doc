@@ -29,7 +29,7 @@ hide_table_of_contents: true
 
 ## 合作联系
 需要定制开发或者合作，请扫描下方二维码加作者微信，备注 "合作"
-<img src="./img/personal.jpeg" width="200" />
+<img src="/img/personal.jpeg" width="200" />
 
 
 
