@@ -7,6 +7,9 @@ sidebar_position: 7
 - 如果使用的动态菜单，即开启了权限管理的情况下，那么就需要添加动态菜单
 - 只需要静态菜单，在约定的`章节`可以了解到，需要在模块的 `views/route.js` 文件添加前端路由
 
+:::info
+视频教程地址[catchadmin之快速开发](https://www.bilibili.com/video/BV1Qh4y1J7eB/)
+:::
 ## 使用
 众所周知，`CatchAdmin` 是模块化的，那么首先需要干什么呢？没错，就是新增模块。如下图所示
 ![pS1rbgP.png](https://s1.ax1x.com/2023/01/17/pS1rbgP.png)

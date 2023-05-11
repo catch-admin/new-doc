@@ -16,6 +16,8 @@ hide_table_of_contents: true
 
 ## laravel 版本
 - [项目安装](https://www.bilibili.com/video/BV1eY411v71J)
+- [catchadmin 模块创建](https://www.bilibili.com/video/BV1jP41127aW/)
+- [catchadmin 快速开发](https://www.bilibili.com/video/BV1Qh4y1J7eB/)
 
 ## thinkphp 版本
 - [项目安装](https://www.bilibili.com/video/BV1bD4y1R72m/)
