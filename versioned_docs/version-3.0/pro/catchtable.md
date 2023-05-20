@@ -187,6 +187,8 @@ export interface Column {
   index?: number | Function // 如果设置了 type=index，可以通过传递 index 属性来自定义索引
   children?: Array<Column> // 多级表头
   filter?:Function,
+  ellipsis?:boolean|number, // 当文字太多时，可以使用省略文字
+  switch: false, // swith 字段状态切换
   // 操作
   update?: boolean, // 编辑操作
   destroy?: boolean // 删除操作
@@ -257,4 +259,22 @@ export interface Column {
     }
   ]
 }
+```
+
+### 字段太长，省略号
+```javascript
+{
+    prop: 'description',
+    label: '岗位描述',
+    ellipsis: true // 添加该字段
+},
+```
+
+### 字段状态切换
+```javascript
+{
+    prop: 'status',
+    label: '状态',
+    switch: true // 添加该字段
+},
 ```
