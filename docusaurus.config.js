@@ -110,7 +110,7 @@ const config = {
           { to: 'blog', label: '博客', position: 'left' },
           { href: 'https://bbs.catchadmin.com', label: '社区', position: 'left' },
           { to: 'video', label: '视频教程', position: 'left' },
-          { to: 'cooperate', label: '合作', position: 'right' },
+          { to: 'cooperate', label: '技术支持', position: 'right' },
           { to: 'donate', label: '赞助', position: 'right' },
           {
             type: 'docsVersionDropdown',
