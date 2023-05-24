@@ -374,17 +374,23 @@ export interface Column {
 当然，catchtable 也支持多集表头，只要一个简单的配置即可
 ```javascript
 {
-  type: 'index',
-  prop: 'gender',
+  prop: 'job_name',
+  label: '岗位名称',
   children: [
     {
-       type: 'index',
-      prop: 'gender',
+      prop: 'coding',
+      label: '岗位编码'
+    },
+    {
+      label: '状态',
+      prop: 'status',
+      switch: true,
+      align: 'center'
     }
   ]
 }
 ```
-
+![](https://s2.xptou.com/2023/05/24/646da4af1bc11.png)
 ### 字段太长，省略号
 ```javascript
 {
