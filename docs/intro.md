@@ -30,6 +30,10 @@ sidebar_position: 1
     <img src="https://svg.hamm.cn/badge.svg?key=License&value=Apache-2.0"/>
 </p >
 
+## 看云册子(付费)
+这是和文档不相关的付费册子，里面包含了 tp6 源码解析，还有一些开发的解决方案。所以感兴趣的可以购买
+[Thinkphp 6.0 企业级后台管理开发&源码分析](https://www.kancloud.cn/akasishikelu/thinkphp6)
+
 ## 功能
 - [x] `用户管理` 后台用户管理
 - [x] `部门管理` 配置公司的部门结构，支持树形结构
