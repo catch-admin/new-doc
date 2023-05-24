@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# catchtable 组件
+# 🚠 Catchtable 组件
 `catch table` 组件旨在快速减少后台开发中表格的重复编写，动态表格的实现将会大大提高效率，并且极易扩展。高级版本页面全部切换到了 `catchadmin` 组件上
 
 ## 基础用法
@@ -125,7 +125,7 @@ sidebar_position: 3
   - `Create` 组件是自带 `api` props 的，api 主要用于接口提交
 
   ## 隐藏分页
-  一般列表都是需要分页的，但是如果是树状结构的表格，一般都是要隐藏的，所以需要使用
+  一般列表都是需要分页的，但是某种场景下，需要隐藏分页的话，可以使用下面的代码
   ```javascript
   <catch-table :pagination="false"/>
   ```
@@ -133,8 +133,11 @@ sidebar_position: 3
 ## 树形表格
 要使用树形表格，在 `catch-table` 中也是非常简单的，只需要
 ```javascript
-  <catch-table :pagination="false" row-key="id"/>
+  <catch-table row-key="id"/>
 ```
+:::info
+注意在 `catchtable` 中，树形表格都是自动隐藏分页的
+:::
 
 ## 空数据显示的文本
 如果表格没有数据，需要友好的提示的话，那么可以使用下面的代码，默认使用`暂无数据`
@@ -159,7 +162,86 @@ sidebar_position: 3
 ```javascript
 <catch-table :defualt-params="{ dic_id: 1}"/>
 ```
+## 曝露方法
+表格对外有几个可以直接调用的方法，调用方法之前需要先设置 table ref，在获取整个`catchadmin`对象 ref 之后，才可以使用
+```javascript
+<catch-table ref="catchtable" />
+// js 代码
+// ⚠️如果你对 vue 不熟悉的话，注意 ref="catchadmin" 这里 ref 的名称需要和 const [catchtable] 相同
+<script lang="ts" setup>
+ import { ref } from 'vue'
+ const catchtable = ref()
+</script>
+```
+### 搜索
+在某些操作之后，需要搜索刷新列表
+```javascript
+<script lang="ts" setup>
+ import { ref } from 'vue'
+ const catchtable = ref()
+ catchtable.value.doSearch()
+</script>
+```
+### 重置
+在某些操作之后，需要重置列表，也可以叫做刷新吧
+```javascript
+<script lang="ts" setup>
+ import { ref } from 'vue'
+ const catchtable = ref()
+ catchtable.value.reset()
+</script>
+```
 
+### 打开弹出层
+```javascript
+<script lang="ts" setup>
+ import { ref } from 'vue'
+ const catchtable = ref()
+ // v 行数据
+ // 弹出层标题
+ catchtable.value.openDialog(v = null, dialogTitle: string = '')
+</script>
+```
+### 关闭弹出层
+```javascript
+<script lang="ts" setup>
+ import { ref } from 'vue'
+ const catchtable = ref()
+ catchtable.value.closeDialog()
+</script>
+```
+
+### 删除
+某些场景需要访问删除接口时候，就可以使用它
+```javascript
+<script lang="ts" setup>
+ import { ref } from 'vue'
+ const catchtable = ref()
+ catchtable.value.del(api: string, id: any)
+</script>
+```
+
+### 设置默认搜索参数
+这个方法在某些特定场景下会有用到，比如一个表格列表的访问他的子列表，子列表需要父列表的某个条件才能访问到。这个时候就需要给子列表设置一个默认参数。`字典管理`列表就是一个很好的例子
+```javascript
+<script lang="ts" setup>
+ import { ref } from 'vue'
+ const catchtable = ref()
+ catchtable.value.setDefaultParams(params: Object = {})
+</script>
+```
+
+### 获取表格多选ID
+目前 `catchadmin` 已经内置了多选删除。如果需要做其他多选操作的时候，可以使用它获取多选数据
+```javascript
+<script lang="ts" setup>
+ import { ref } from 'vue'
+ const catchtable = ref()
+ catchtable.value.getMultiSelectIds()
+</script>
+```
+## 表格插槽
+为了让表格更加灵活点，`catchtable` 内置了几个插槽，来让用户自定义操作
 ## 表格栏目
 对于表格栏目，可以通过表格类型窥探一二。看下表格栏目是如何定义的
 ```javascript
@@ -269,12 +351,33 @@ export interface Column {
     ellipsis: true // 添加该字段
 },
 ```
+![](https://s2.xptou.com/2023/05/24/646d451b3e49d.png)
 
 ### 字段状态切换
+某些场景下，业务中只需要在表格中做某些字段的状态切换，这个时候就可以使用下面的代码
 ```javascript
 {
-    prop: 'status',
+    prop: 'status', // 设置字段，这里仅做演示
     label: '状态',
     switch: true // 添加该字段
 },
 ```
+`catchadmin`在后端通常使用 `enable` 方法做字段切换的路由, 你可以根据实际改动。代码如下
+```php
+public function enable($id, Request $request)
+{
+    return $this->model->toggleBy($id, $request->get('field'));
+}
+```
+![](https://s2.xptou.com/2023/05/24/646d4672500a6.png)
+
+### 排序
+某些场景下，业务中只需要在表格中做某个字段排序。通常来说，elementPlus 只是在前端列表单独一页排序，但是使用下面的代码，可以直接进行后端排序，不需要写任何一行代码，都是自动完成的
+```javascript
+{
+  prop: 'sort',
+  label: '排序',
+  sortable: true
+}
+```
+![](https://s2.xptou.com/2023/05/24/646d476c4962a.png)

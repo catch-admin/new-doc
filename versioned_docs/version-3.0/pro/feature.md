@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 ---
-# 高级功能
+# 🚀 高级功能
 在这里会介绍关于 `CatchAdmin` 高级功能,因为高级版本正在完善中，所以这个版面会持续更新
 
 ## catchtable
