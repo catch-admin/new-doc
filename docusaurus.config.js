@@ -118,6 +118,7 @@ const config = {
             dropdownItemsAfter: [{ to: 'versions', label: '所有版本' }],
             dropdownActiveClassDisabled: true
           },
+          { href: 'https://spark.pfecms.com', label: 'SparkShop', position: 'right' },
           {
             type: 'search',
             position: 'right'
