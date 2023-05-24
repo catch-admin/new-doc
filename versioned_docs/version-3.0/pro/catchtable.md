@@ -242,6 +242,48 @@ sidebar_position: 3
 ```
 ## 表格插槽
 为了让表格更加灵活点，`catchtable` 内置了几个插槽，来让用户自定义操作
+### 表格操作插槽
+`catchtable` 默认只有新增操作，如果你需要添加其他的操作，那么你可以使用以下代码，新增表格的操作
+```vue
+ <catch-table>
+      <template #operation>
+        <el-button>操作插槽</el-button>
+      </template>
+  </catch-table>
+```
+![](https://s2.xptou.com/2023/05/24/646d9eff36fed.png)
+### 批量操作插槽
+目前表格内置了`批量删除`操作。当表格需要额外的批量操作时，可以使用该插槽。
+```vue
+ <catch-table>
+     <template #multiOperate>
+        <el-button>多选操作</el-button>
+      </template>
+  </catch-table>
+```
+光是这样的是不够的，还要获取批量选择ID，请查看[获取表格多选ID](#获取表格多选id)，获取到多选ID之后进行操作
+![](https://s2.xptou.com/2023/05/24/646da1251a841.png)
+### 栏目操作插槽
+表格栏目支持`更新`和`删除`操作,如果还需要额外的操作，那么可以使用
+```vue
+// 通过 scope 你可以获取行数据
+<catch-table>
+  <template #operate="scope">
+    <el-button>自定义栏目操作</el-button>
+  </template>
+</catch-table>
+```
+![](https://s2.xptou.com/2023/05/24/646da22bba7ff.png)
+### 弹窗插槽
+弹窗插槽是每个表格都需要的，目前只服务于表单数据。
+```vue
+<catch-table>
+  <template #dialog="row">
+  // 这里的 Create 组件就是 Form 组件
+    <Create :primary="row?.id" :api="api" />
+  </template>
+  </catch-table>
+```
 ## 表格栏目
 对于表格栏目，可以通过表格类型窥探一二。看下表格栏目是如何定义的
 ```javascript
