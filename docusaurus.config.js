@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Catchadmin 后台管理框架',
-  tagline: '人生苦短 我选择 Catch🤪',
+  tagline: '人生苦短 我选择 Catch',
   url: 'https://catchadmin.com',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
@@ -26,7 +26,19 @@ const config = {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans']
   },
-
+  plugins: [
+    async function tailwindcssPlugin(context, options) {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require('tailwindcss'))
+          postcssOptions.plugins.push(require('autoprefixer'))
+          return postcssOptions
+        }
+      }
+    }
+  ],
   presets: [
     [
       'classic',
@@ -109,7 +121,8 @@ const config = {
           },
           { to: 'blog', label: '博客', position: 'left' },
           { href: 'https://bbs.catchadmin.com', label: '社区', position: 'left' },
-          { to: 'video', label: '视频教程', position: 'left' },
+          { to: 'disclaimer', label: '免责声明', position: 'left' },
+          { to: '/docs/3.0/pro/intro', label: '专业版🔥', position: 'right' },
           { to: 'cooperate', label: '技术支持', position: 'right' },
           { to: 'donate', label: '赞助', position: 'right' },
           {

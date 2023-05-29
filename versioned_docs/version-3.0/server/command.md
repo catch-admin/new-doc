@@ -31,7 +31,7 @@ php artisan catch:module:install <permissions>
 ```
 ### 创建 Migrate 文件
 ```shell
-php artisan catch:make:migrate <module> <seeder_name>
+php artisan catch:make:migration <module> <migration_name>
 ```
 
 ### 创建 Seed 文件
