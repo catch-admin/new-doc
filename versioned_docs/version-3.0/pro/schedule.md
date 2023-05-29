@@ -38,7 +38,7 @@ class test extends Command
     }
 }
 ```
-那么一个基本的调度任务就创建成功了。添加成功之后，你需要如何调度任务呢？在 `Laravel` 中，首先你要在服务器缇添加一条 `crontab` 规则。
+那么一个基本的调度任务就创建成功了。添加成功之后，你需要如何调度任务呢？在 `Laravel` 中，首先你要在服务器添加一条 `crontab` 规则。
 ```shell
 * * * * * cd /www/project(项目的根目录) && php artisan schedule:run >> /dev/null 2>&1
 ```
@@ -123,4 +123,4 @@ class CronTaskFailed
     {}
 }
 ```
-听过这两个事件，你可以轻松实现上述场景，只需要实现对应的 `Listener` 即可。如果对 Laravel 的事件系统不了解，可以查看[Laravel事件系统](https://learnku.com/docs/laravel/10.x/eventsmd/14864)
+通过这两个事件，你可以轻松实现上述场景，只需要实现对应的 `Listener` 即可。如果对 Laravel 的事件系统不了解，可以查看[Laravel事件系统](https://learnku.com/docs/laravel/10.x/eventsmd/14864)

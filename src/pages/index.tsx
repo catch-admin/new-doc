@@ -52,21 +52,21 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className='flex absolute z-[100] top-[31rem] mx-auto w-full justify-center'>
-        <Link className="flex w-32 pt-2 justify-center rounded-md cursor-pointer bg-gray-100 dark:bg-white  px-3.5 py-2.5 text-sm font-semibold text-gray-900 hover:shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      <div className='hidden sm:flex absolute z-[100] top-[31rem] mx-auto w-full justify-center'>
+        <Link className="flex w-32 h-12 pt-2 justify-center rounded-md cursor-pointer bg-gray-100 dark:bg-white text-sm font-semibold text-gray-900 hover:shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         to="https://github.com/JaguarJack/catch-admin"
         >
           <svg viewBox="0 0 24 24" className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill={!isDarkTheme ? "#000000" : "#000000"}><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github</title> <rect width="24" height="24" fill="none"></rect> <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"></path></g></svg>        
           <div className='pt-[0.25rem] ml-1 text-base pr-2'> Github </div> 
         </Link>
-        <Link className="flex w-32 pt-2 ml-5 justify-center rounded-md cursor-pointer bg-gray-100 dark:bg-white  px-3.5 py-2.5 text-sm font-semibold text-gray-900 hover:shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        <Link className="flex w-32 h-12 pt-2 ml-5 justify-center rounded-md cursor-pointer bg-gray-100 dark:bg-white text-sm font-semibold text-gray-900 hover:shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         to="https://gitee.com/catchadmin/catchAdmin"
         >
           <svg fill="#eb0505" className="w-8 h-8" viewBox="-2.4 -2.4 28.80 28.80" role="img" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0" transform="translate(0,0), scale(1)"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#ffffff" strokeWidth="0"></rect></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M11.984 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.016 0zm6.09 5.333c.328 0 .593.266.592.593v1.482a.594.594 0 0 1-.593.592H9.777c-.982 0-1.778.796-1.778 1.778v5.63c0 .327.266.592.593.592h5.63c.982 0 1.778-.796 1.778-1.778v-.296a.593.593 0 0 0-.592-.593h-4.15a.592.592 0 0 1-.592-.592v-1.482a.593.593 0 0 1 .593-.592h6.815c.327 0 .593.265.593.592v3.408a4 4 0 0 1-4 4H5.926a.593.593 0 0 1-.593-.593V9.778a4.444 4.444 0 0 1 4.445-4.444h8.296z"></path></g></svg>
           <div className='pt-[0.25rem] ml-1 text-base pr-2'>Gitee</div>
         </Link>
 
-        <Link className="flex w-32 pt-2 ml-5 justify-center rounded-md cursor-pointer bg-gray-100 dark:bg-white  px-3.5 py-2.5 text-sm font-semibold text-gray-900 hover:shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        <Link className="flex w-32 h-12 pt-2 ml-5 justify-center rounded-md cursor-pointer bg-gray-100 dark:bg-white  text-sm font-semibold text-gray-900 hover:shadow-lg hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         to="https://v3.catchadmin.com/"
         >
           <div className='pt-[0.25rem] ml-1 text-base pr-2'>👉 演示站点</div>
