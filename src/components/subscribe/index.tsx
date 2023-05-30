@@ -103,7 +103,8 @@ export function Year() {
         <div className="w-96 h-[30rem] bg-gray-50 dark:bg-gray-900 rounded-3xl pl-10 pr-10 pt-5 pb-5 hover:shadow">
         <h3 className="inline-block w-full bg-gradient-to-r from-[#F8CC6B] to-purple-300 bg-clip-text text-transparent font-bold text-2xl uppercase mt-6 text-center">🌟 年订阅</h3>
         <p className="w-full text-center">
-            <span className="text-gray-600 dark:text-white font-bold text-5xl">¥699</span>
+            <div className="text-gray-400 dark:text-white font-bold text-xl line-through">¥699</div>
+            <div className="text-gray-600 dark:text-white font-bold text-5xl">¥599</div>
         </p>
         <ul className="space-y-6 mt-6">
             <li className="flex items-center gap-10">
@@ -143,7 +144,8 @@ export function Year() {
           👑 永久订阅
       </h3>
       <p className="w-full text-center">
-          <span className="text-gray-600 dark:text-white font-bold text-5xl">¥1399</span>
+          <div className="text-gray-400 dark:text-white font-bold text-xl line-through">¥1399</div>
+          <div className="text-gray-600 dark:text-white font-bold text-5xl">¥999</div>
       </p>
       <ul className="space-y-6 mt-6">
         <li className="flex items-center gap-10">
