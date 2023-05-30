@@ -171,8 +171,11 @@ export function Year() {
 
   export function Subscribe() {
     return (
-      <div className="flex flex-col sm:flex-row gap-5 mx-auto w-full ml-0 sm:ml-24">
-        <Year/><Forever/>
+      <div>
+        <div className='text-center text text-gray-400'>专业版首卖优惠, 欢迎选购！产品将会在下个版本功能发布时恢复<span className='text-xl text-red-300'>原价</span>,感谢支持🙏</div>  
+        <div className="flex flex-col sm:flex-row gap-5 mx-auto w-full ml-0 sm:ml-24">
+            <Year/><Forever/>
+        </div>
       </div>
     )
   }
