@@ -38,7 +38,7 @@ export function Modal(prop:modalProp) {
                             </div>
                         </div>
                     </div>
-                    <div className='text-center mt-5'><span className='text text-gray-500'>购买前请认真阅读</span><span onClick={() => close() } className='text-lg font-bold'><a href='/docs/3.0/pro/price#使用说明'>使用说明</a></span></div>
+                    <div className='text-center mt-5'><span className='text text-gray-500'>请扫码进行购买！购买前请认真阅读</span><span onClick={() => close() } className='text-lg font-bold'><a href='/docs/3.0/pro/price#使用说明'>使用说明</a></span></div>
                 </div>
             </div>
             </div>
