@@ -419,6 +419,57 @@ public function enable($id, Request $request)
 ```
 ![](https://s2.xptou.com/2023/05/24/646d4672500a6.png)
 
+### 图片预览
+如果表格中需要进行图片预览，那么可以使用下面的配置，只需要使用 `image` 属性
+```javascript
+ {
+    label: '内容',
+    prop: 'content',
+    image: true,
+  },
+```
+如果你是想要预览，如果是单图的话，你需要使用 `filter` 转换成多图数组
+```javascript
+{
+    label: '内容',
+    prop: 'content',
+    image: true,
+    preview: true,
+    filter: (value: any) => {
+      return [value]
+    }
+  },
+
+```
+### 链接
+如果表格中需要某个字段需要链接，那么可以使用下面的配置, 也是非常简单，只需要配置 `link` 属性
+```javascript
+{
+    label: '链接',
+    prop: 'url',
+    link: true
+  },
+```
+### 标签展示
+如果表格中需要某个字段需要标签，那么可以使用下面的配置, 也是非常简单，只需要配置 `tags` 属性,单个标签
+```javascript
+ {
+    label: '类型',
+    prop: 'type',
+    tags: true
+  },
+```
+多个标签一般都是配合枚举值，`catchadmin` 枚举一般使用 number，并且从数字`1`开始，数组可以很好配合使用
+```javascript
+ {
+    label: '类型',
+    prop: 'type',
+    tags: ['danger', 'info', 'success'],
+    filter: (value: number) => {
+      return value === 1 ? '轮播图' : value === 2 ? '友情链接' : '广告'
+    }
+  },
+```
 ### 排序
 某些场景下，业务中只需要在表格中做某个字段排序。通常来说，elementPlus 只是在前端列表单独一页排序，但是使用下面的代码，可以直接进行后端排序，不需要写任何一行代码，都是自动完成的
 ```javascript
