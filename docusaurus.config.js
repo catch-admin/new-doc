@@ -37,7 +37,17 @@ const config = {
           return postcssOptions
         }
       }
-    }
+    },
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api',
+        path: 'api',
+        routeBasePath: 'api',
+        sidebarPath: require.resolve('./sidebarsApi.js')
+        // ... other options
+      }
+    ]
   ],
   presets: [
     [
@@ -122,6 +132,7 @@ const config = {
           { to: 'blog', label: '博客', position: 'left' },
           { href: 'https://bbs.catchadmin.com', label: '社区', position: 'left' },
           { to: 'disclaimer', label: '免责声明', position: 'left' },
+          { to: '/api/intro', label: '接口文档', position: 'left' },
           { to: '/docs/3.0/pro/intro', label: '专业版🔥', position: 'right' },
           { to: 'cooperate', label: '技术支持', position: 'right' },
           { to: 'donate', label: '赞助', position: 'right' },
