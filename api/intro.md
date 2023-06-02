@@ -3,17 +3,19 @@ sidebar_position: 1
 ---
 # 🕶️ 介绍
 这是关于 `CatchAdmin` 接口开发文档。这里会有关于 `CatchAdmin` 后台管理系统的所有的接口信息。除了开发模块的`代码生成`。针对每个接口会以这样格式进行输出。
-- 标题
-- 头信息
-- 请求信息
-- 响应信息
+- `标题`
+- `头信息`
+- `请求信息`
+- `响应信息`
 
 ## 默认头信息
 |参数|必选|类型|说明
 |  ---- | ---- |----|-----
 |Authorization|是|String|认证 Token
-|Request-From|是|String|默认值: Dashboard, 请求属于后台
+|Request-From|是|String|默认值: Dashboard, 标记请求属于后台
+:::info
 在不做特殊说明下，每个请求将会默认带有两个默认值头信息
+:::
 
 ## 公共响应格式
 在 `CatchAdmin` 中，一般都是响应 `200 http code`，如果程序有异常，也不会返回 `500` 之类的 `http code`，它将会错误信息包裹到自定义响应数据中，下面是 `CatchAdmin` 的响应格式，请务必看下。
