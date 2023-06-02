@@ -127,15 +127,15 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: '文档'
+            label: '🔖文档'
           },
-          { to: 'blog', label: '博客', position: 'left' },
-          { href: 'https://bbs.catchadmin.com', label: '社区', position: 'left' },
-          { to: 'disclaimer', label: '免责声明', position: 'left' },
+          { to: 'blog', label: '📖博客', position: 'left' },
+          { href: 'https://bbs.catchadmin.com', label: '🤝社区', position: 'left' },
           { to: '/api/intro', label: '🏆接口文档', position: 'left' },
+          { to: 'disclaimer', label: '🙅‍♂️免责声明', position: 'left' },
           { to: '/docs/3.0/pro/intro', label: '专业版🔥', position: 'right' },
-          { to: 'cooperate', label: '技术支持', position: 'right' },
-          { to: 'donate', label: '赞助', position: 'right' },
+          { to: 'cooperate', label: '技术支持💪', position: 'right' },
+          { to: 'donate', label: '赞助🙏', position: 'right' },
           {
             type: 'docsVersionDropdown',
             position: 'right',
