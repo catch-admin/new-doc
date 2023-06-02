@@ -37,7 +37,17 @@ const config = {
           return postcssOptions
         }
       }
-    }
+    },
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'api', // omitted => default instance
+        path: 'api',
+        routeBasePath: 'api',
+        sidebarPath: require.resolve('./sidebarsApi.js')
+        // ... other options
+      }
+    ]
   ],
   presets: [
     [

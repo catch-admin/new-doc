@@ -122,9 +122,7 @@ export function Year() {
                 <span className="text-gray-600 dark:text-gray-400">✊ 购买日起一年内可更新</span>
             </li>
         </ul>
-        <div className="mt-12 relative block w-full h-12 bg-gradient-to-br from-[#F8CC6B] to-purple-300 border-2 border-transparent dark:border-solid dark:border-gray-500 rounded-lg text-gray-900 font-semibold transition hover:opacity-80 cursor-pointer">
-        <span onClick={() => setModalVisible(true)} className="inset-0 absolute flex items-center justify-center rounded-lg bg-gray-900 text-white font-semibold text-center cursor-pointer">🚀 点 击 购 买</span>
-        </div>
+        <div onClick={() => setModalVisible(true)} className="inline-flex  dark:border-solid dark:border-gray-500 w-full mt-8 justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:opacity-80 cursor-pointer"><span>🚀 点 击 购 买 <span aria-hidden="true" className="hidden text-slate-400 sm:inline">→</span></span></div>
         <ForYearModal {...modalConfig}/>
         </div>
     )
@@ -163,9 +161,7 @@ export function Year() {
             <span className="text-gray-600 dark:text-gray-400">💪 购买日起永久更新所有功能</span>
         </li>
       </ul>
-      <div className="mt-12 relative block w-full h-12 bg-gradient-to-br from-[#F8CC6B] to-purple-300 border-2 border-transparent dark:border-solid dark:border-gray-500 rounded-lg text-gray-900 font-semibold transition hover:opacity-80 cursor-pointer">
-      <span onClick={() => setModalVisible(true)} className="inset-0 absolute flex items-center justify-center rounded-lg bg-gray-900 text-white font-semibold text-center">🚀 点 击 购 买</span>
-      </div>
+      <div onClick={() => setModalVisible(true)} className="inline-flex  dark:border-solid dark:border-gray-500 w-full mt-8 justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:opacity-80 cursor-pointer"><span>🚀 点 击 购 买 <span aria-hidden="true" className="hidden text-slate-400 sm:inline">→</span></span></div>
       <ForeverModal {...modalConfig}/>
     </div>
     )
