@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 ---
-# 更新
+# 删除
 
 ### 接口地址
 - `api/users/{id}`
