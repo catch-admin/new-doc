@@ -183,6 +183,10 @@ const config = {
               {
                 label: 'SparkShop 开源商城',
                 href: 'https://spark.pfecms.com'
+              },
+              {
+                label: '竖豆科技',
+                href: 'https://www.ishudou.cn/'
               }
             ]
           },
