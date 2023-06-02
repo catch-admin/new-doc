@@ -37,17 +37,7 @@ const config = {
           return postcssOptions
         }
       }
-    },
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'api', // omitted => default instance
-        path: 'api',
-        routeBasePath: 'api',
-        sidebarPath: require.resolve('./sidebarsApi.js')
-        // ... other options
-      }
-    ]
+    }
   ],
   presets: [
     [
@@ -199,7 +189,7 @@ const config = {
                 href: 'https://www.ishudou.cn/'
               },
               {
-                label: '美业管家',
+                label: '美业冠佳',
                 href: 'https://www.meiyeguanjia.com/'
               }
             ]
