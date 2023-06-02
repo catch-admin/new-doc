@@ -187,6 +187,10 @@ const config = {
               {
                 label: '竖豆科技',
                 href: 'https://www.ishudou.cn/'
+              },
+              {
+                label: '美业冠佳',
+                href: 'https://www.meiyeguanjia.com/'
               }
             ]
           },
