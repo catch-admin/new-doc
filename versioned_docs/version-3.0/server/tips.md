@@ -6,14 +6,14 @@ sidebar_position: 100
 这里将会更新一些`Catchadmin`后台管理系统中的一些小技巧，以便能更好适应这个框架的开发。也👏欢迎开发者补充
 
 ## 取消路由中间件
-`CatchAdmin` 后台路由默认加了设置的路由，目前的是有四个。
+`CatchAdmin` 后台路由默认加了设置的中间件，目前的是有四个。
 ```php
-Catch\Middleware\AuthMiddleware
-Catch\Middleware\JsonResponseMiddleware
-Modules\User\Middlewares\OperatingMiddleware
-Modules\Permissions\Middlewares\PermissionGate
+Catch\Middleware\AuthMiddleware // 认证中间件
+Catch\Middleware\JsonResponseMiddleware // Json 响应中间件
+Modules\User\Middlewares\OperatingMiddleware // 操作日志记录的中间件
+Modules\Permissions\Middlewares\PermissionGate // 权限认证的中间件
 ```
-这是由于在模块服务中添加的路由通常都是全局注册到后台所有路由中，但是有时候你并不需要这些路由, 比如做微信公众号验证的时候，并不需要这些路由了，你可以使用下面的技巧`withoutMiddleware(config('catch.route.middlewares'))` 取消模块中所有的公共中间件
+由于在模块服务中添加的路由通常都是**全局**注册到后台所有路由中，但是有时候你并不需要这些路由, 比如做微信公众号验证的时候，并不需要这些路由。你可以使用下面的技巧`withoutMiddleware(config('catch.route.middlewares'))` 取消模块中所有的公共中间件
 ```php
 Route::withoutMiddleware(config('catch.route.middlewares'))
     ->prefix('wechat')
