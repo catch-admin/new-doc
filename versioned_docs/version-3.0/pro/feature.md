@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 # 🚀 高级功能
 在这里会介绍关于 `CatchAdmin` 高级功能,因为高级版本正在完善中，所以这个版面会持续更新
@@ -11,6 +11,7 @@ sidebar_position: 2
 - 自带排序功能
 - 自带状态切换
 - 等等...
+
 更多功能实现可查看文档 [catchtable](/docs/3.0/pro/catchtable)
 
 ## token 管理
