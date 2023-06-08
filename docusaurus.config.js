@@ -200,7 +200,7 @@ const config = {
                 href: 'https://www.ishudou.cn/'
               },
               {
-                label: '美业冠佳',
+                label: '美业管家',
                 href: 'https://www.meiyeguanjia.com/'
               }
             ]
