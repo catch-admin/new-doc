@@ -45,3 +45,36 @@ Route::withoutMiddleware('Catch\Middleware\JsonResponseMiddleware')
 ```
 这是由于 `CatchAdmin`通过中间件将所有响应都转换成了`JsonResponse`,然后通过劫持 `JsonResponse` 对象，返回固定的响应格式。
 所以只要取消 `JsonResponseMiddleware`, 然后再自己自定义针对特定接口做相应的数据结构即可
+
+## 验证属性遇到第一个错误直接返回
+如果不做任何控制的话，Laravel 的验证会将每个属性的规则全部验证一遍，然后返回属性的第一个错误，这样非常浪费，例如属性如果需要数据库验证的话，那么即使前面的规则不符合了，还会使用到数据库验证，例如下面的例子
+```php
+$request->validate([
+            'code' => [
+                'required',
+                'size:6',
+                function (string $attribute, mixed $value, \Closure $fail) use ($request) {
+                   // 这里是数据验证 code 码，例如手机验证码
+            }]
+        ]);
+```
+按照目前的 rule，即使前台发送的 code 不符合 size:6 这个要求，它还是会使用从数据库验证，非常浪费。所以需要遇到第一个 error 就返回，可以这么使用
+```php
+$request->validate([
+            'code' => [
+                'bail', // 添加这个属性即可
+                'required',
+                'size:6',
+                function (string $attribute, mixed $value, \Closure $fail) use ($request) {
+                   // 这里是数据验证 code 码，例如手机验证码
+            }]
+        ]);
+```
+
+如果是直接通过 `$request->validate()` 进行请求数据的验证，那么每个属性都需要加 `bail` 规则，如果你使用的是 `FormRequest` 进行验证。那么可以使用下面的技巧。添加 `stopOnFirstFailure` 属性
+```php
+protected $stopOnFirstFailure = true;
+```
+:::info
+通过将 stopOnFirstFailure 属性添加到请求类，一旦发生单个验证失败，它应该停止验证所有属性
+:::
