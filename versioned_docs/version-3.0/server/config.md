@@ -175,7 +175,3 @@ config('one')
 ```php
 config('permissions.one.some_key')
 ```
-
-       
-
-

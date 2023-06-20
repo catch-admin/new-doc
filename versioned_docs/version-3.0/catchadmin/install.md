@@ -18,14 +18,14 @@ sidebar_position: 1
 - [yarn 前端包管理器](https://yarn.bootcss.com/)
 - [vite](https://cn.vitejs.dev/)
 
-### 安装 PHP 项目
+### 下载项目
 接下来，您需要下载 CatchAdmin 项目。您可以前往该项目在 [CatchAdmin](https://github.com/JaguarJack/catch-admin) 上的页面进行下载，也可以使用 `git` clone 命令将代码克隆到本地，这样就能及时获取代码更新。
 ```sh
 git clone https://github.com/JaguarJack/catch-admin.git
 ```
 当然你也可以使用 [Gitee](https://gitee.com/jaguarjack/catchAdmin), 有可能会同步不及时。
 
-请注意，该项目不提供 Web 安装方式，因此您需要使用命令行方式进行安装。在安装之前，请确保已经安装了 composer 包管理器。如果您使用的是 Mac OS 或者 Linux，可以在终端输入以下命令安装 composer：
+请注意，该项目不提供 Web 安装方式，因此您需要使用命令行方式进行安装。在安装之前，请确保已经安装了 `composer` 包管理器。如果您使用的是 `Mac OS` 或者 `Linux`，可以在终端输入以下命令安装 `composer`
 ```shell
 // mac os
 brew install composer
@@ -33,7 +33,7 @@ brew install composer
 // linux
 sudo apt-get install composer
 ```
-如果您使用的是 Windows 系统，可以从 [composer](https://docs.phpcomposer.com/) 的官方网站下载 exe 安装文件进行安装。一旦您已经安装了 `composer`，接下来您可以进入 `CatchAdmin` 项目所在的目录，并运行以下命令进行安装：
+如果您使用的是 `Windows` 系统，可以从 [composer](https://docs.phpcomposer.com/) 的官方网站下载 exe 安装文件进行安装。一旦您已经安装了 `composer`，接下来您可以进入 `CatchAdmin` 项目所在的目录，并运行以下命令进行安装：
 ```shell
 composer install
 ```
