@@ -38,7 +38,6 @@ const config = {
         }
       }
     },
-    './plugins/gitee',
     [
       '@docusaurus/plugin-content-docs',
       {
