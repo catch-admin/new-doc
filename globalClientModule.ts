@@ -2,6 +2,8 @@ import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import {ClientModule} from "@docusaurus/types";
 
 const redirectURI = 'https://catchadmin.com'
+const clientID = 'd04e2c13091622432566fd6914548c1394605503a5252f1444e36683e25fef16'
+const clientSecret = '6b8c1024e59672c0eaa732b9491db10ef4f82a46bf79a35ed9ff3ea1f8c3590f'
 
 const saveTokens = (accessToken, refreshToken) => {
     const now = Date.now()
@@ -28,9 +30,6 @@ const getAccessToken = async (code = null) => {
         }
         return token
     } else {
-        console.log(123123)
-        const clientID = process.env.gitee_client_id
-        const clientSecret = process.env.gitee_secret
         const response = await fetch('https://gitee.com/oauth/token', {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
             headers: {
@@ -116,7 +115,6 @@ const module: ClientModule = {
     onRouteDidUpdate({location, previousLocation}) {
         if (ExecutionEnvironment.canUseDOM) {
             if (location.pathname != previousLocation?.pathname) {
-                const clientID = process.env.gitee_client_id
                 if (location.pathname.startsWith('/doc') || location.pathname.startsWith('/api')) {
                     const token = localStorage.getItem('access_token')
                     
