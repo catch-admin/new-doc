@@ -45,7 +45,12 @@ const config = {
         }
       }
     },
-    'docusaurus2-dotenv',
+    [
+      'docusaurus2-dotenv',
+      {
+        systemvars: true
+      }
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {
