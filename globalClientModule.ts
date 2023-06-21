@@ -56,7 +56,7 @@ const getAccessTokenFor = () => {
 }
 
 const refreshToken = async() => {
-    const response = await fetch('https://gitee.com/oauth/token?grant_type=refresh_token&refresh_token=' + getAccessTokenFor(), {
+    const response = await fetch('https://gitee.com/oauth/token?grant_type=refresh_token&refresh_token=' + localStorage.getItem('refresh_token'), {
         method: 'POST'
     })
 
