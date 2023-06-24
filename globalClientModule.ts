@@ -66,6 +66,9 @@ const refreshToken = async() => {
 }
 
 const isStarred = async () => {
+    if (sessionStorage.getItem('stared') === 'true') {
+        return true
+    }
     const url = "https://gitee.com/api/v5/user/starred/JaguarJack/catchadmin?access_token=" + getAccessTokenFor()
     await fetch(url, {method: 'GET'})
           .then(r => {
@@ -86,6 +89,8 @@ const isStarred = async () => {
                   }).then(r => {
                     star()
                   })
+            } else {
+                sessionStorage.setItem('stared', 'true')
             }
           })
           .catch(error => {
