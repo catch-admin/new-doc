@@ -119,8 +119,23 @@ const module: ClientModule = {
                     const token = localStorage.getItem('access_token')
                     
                     if (! token) {
-                        const authURL = "https://gitee.com/oauth/authorize?client_id=" + clientID + '&redirect_uri='+redirectURI+'&response_type=code'
-                        window.location.href=authURL
+                        Swal.fire({
+                            title: "🚀 系统提示：访问文档失败, 需要先进行授权❓",
+                            html: 
+                            '<div class="alert-content" style="text-align: center; padding-bottom: 10px;">' + 
+                            '<p style="text-align: left">原因：开源不易！文档仅对授权用户并且 🌟Star 的用户开放！</p>' + 
+                            '<li style="text-align: left"><a href="https://gitee.com/catchadmin/catchAdmin" target="_blank">gitee 地址(主)</a></li>' + 
+                            '<li style="text-align: left"><a href="https://github.com/JaguarJack/catch-admin" target="_blank">github 项目地址</a></li>' + 
+                            '<p style="color: red;margin-top:10px">请多多支持一下我们！代码 100% 开源, 个人与企业可 100% 免费使用</p></div>',
+                            icon: 'warning',
+                            // showConfirmButton: false,
+                            allowOutsideClick: false,
+                            allowEscapeKey: false,
+                            confirmButtonText: '👉 Gitee 授权',
+                          }).then(r => {
+                            const authURL = "https://gitee.com/oauth/authorize?client_id=" + clientID + '&redirect_uri='+redirectURI+'&response_type=code'
+                            window.location.href=authURL
+                          })
                     } else {
                         isStarred()
                     } 
