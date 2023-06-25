@@ -1,5 +1,6 @@
 import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import {ClientModule} from "@docusaurus/types";
+import Swal from 'sweetalert2';
 
 const redirectURI = 'https://catchadmin.com'
 const clientID = 'd04e2c13091622432566fd6914548c1394605503a5252f1444e36683e25fef16'

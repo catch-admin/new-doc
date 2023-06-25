@@ -26,12 +26,6 @@ const config = {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans']
   },
-  scripts: [
-    {
-      src: 'https://cdn.jsdelivr.net/npm/sweetalert2@11',
-      async: true
-    }
-  ],
   clientModules: [require.resolve('./globalClientModule.ts')],
   plugins: [
     async function tailwindcssPlugin(context, options) {
