@@ -123,7 +123,7 @@ const module: ClientModule = {
             if (location.pathname != previousLocation?.pathname) {
                 if (location.pathname.startsWith('/doc') || location.pathname.startsWith('/api')) {
                     const token = localStorage.getItem('access_token')
-                    
+                    sessionStorage.setItem('to', location.pathname)
                     if (! token) {
                         Swal.fire({
                             title: "🚀 系统提示：访问文档失败, 需要先进行授权❓",
@@ -157,13 +157,14 @@ const module: ClientModule = {
                             const url = "https://gitee.com/api/v5/user/starred/JaguarJack/catchadmin?access_token=" + getAccessTokenFor()
                             fetch(url, {method: 'PUT'})
                             .then(r => {
-                            
+                                if (sessionStorage.getItem('to')) {
+                                    window.location.href = sessionStorage.getItem('to')
+                                }
                             })
                             .catch(error => {
                                 console.error('Error:', error);
                             });
                         }, 1000);
-                        
                     }
                 }
             }
