@@ -118,7 +118,7 @@ const config = {
     ({
       announcementBar: {
         id: 'pro',
-        content: '<a rel="noopener noreferrer" href="https://license.catchadmin.com">🔥专业版本发布,开业优惠,将会在下个版本功能发布后恢复原价,欢迎购买👏</a> ',
+        content: '<a rel="noopener noreferrer" href="https://license.catchadmin.com">🔥专业版本新功能发布,目前优惠价1099, 可进入授权网站进行购买，感谢支持👏</a> ',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false
