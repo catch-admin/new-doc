@@ -145,7 +145,7 @@ export function Year() {
       </h3>
       <p className="w-full text-center">
           <div className="text-gray-400 dark:text-white font-bold text-xl line-through">¥1399</div>
-          <div className="text-gray-600 dark:text-white font-bold text-5xl">¥999</div>
+          <div className="text-gray-600 dark:text-white font-bold text-5xl">¥1099</div>
       </p>
       <ul className="space-y-6 mt-6">
         <li className="flex items-center gap-10">
