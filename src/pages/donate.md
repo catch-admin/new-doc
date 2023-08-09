@@ -55,8 +55,6 @@ hide_table_of_contents: true
 
 </div>
 <div style={{ "margin-top" : "30%", "margin-left": "100px"}}>
-    <img src="/img/support.jpeg" width = "200" alt="support"/>
-    <div style={{"text-align": "center"}}>微信</div>
 </div>
 </div>
 

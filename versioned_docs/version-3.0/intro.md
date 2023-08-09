@@ -40,10 +40,10 @@ export const Checkedbox = ({children, color}) => (
 [demo 地址](https://v3.catchadmin.com)
 - 账户: `catch@admin.com`
 - 密码: `catchadmin`
-
+<!--
 ## 赞助
 如果项目对你有帮助，或者在工作上帮你节省了开发时间。在力所能及的情况下，可以支持下`Catchadmin`项目, 非常感谢🙏
-<img src="/img/support.jpeg" width = "200" alt="support"/>
+<img src="/img/support.jpeg" width = "200" alt="support"/>-->
 
 ## 讨论
 - [论坛讨论](https://bbs.catchadmin.com)
