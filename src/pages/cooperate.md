@@ -30,7 +30,7 @@ hide_table_of_contents: true
 
 ## 申请技术支持
 需要技术支持的开发者，请扫描下方二维码加作者微信，备注 "技术支持"
-<img src="/img/personal.jpeg" width="200" />
+<!--<img src="/img/personal.jpeg" width="200" />-->
 
 ## 定制开发/合作
 作为一名经验丰富的 `PHP` 开发者，我非常期待能够为您提供我的服务。我可以为您提供多种技能和服务，包括但不限于 `PHP` 网站和应用程序的开发、`MySQL` 数据库设计和管理、前端开发，包括 `HTML`、`CSS` 和 `JavaScript`、服务器设置和管理、代码审查和优化、安全性和性能优化等。我相信每个项目都有其独特的需求和挑战，因此我将与您密切合作，确保每个细节都得到妥善处理。
@@ -60,7 +60,7 @@ hide_table_of_contents: true
 
 ## 合作联系
 需要定制开发或者合作，请扫描下方二维码加作者微信，备注 "合作"
-<img src="/img/personal.jpeg" width="200" />
+<!--<img src="/img/personal.jpeg" width="200" />-->
 
 
 
