@@ -46,8 +46,9 @@ export const Checkedbox = ({children, color}) => (
 - 可以提 `ISSUE`，请按照 `issue` 模板提问
 - 加入 Q 群 `302266230` 暗号 `catchadmin`。
 
-## 支持创作
-如果项目对你有帮助，可以订阅支持我❤️。你的每一份支持是对我最大的鼓励。开源不易，感谢支持。可以通过使用 [**🎉 爱发电**](https://afdian.net/@jaguarjack)订阅支持创作。
+## 赞助
+如果项目对你有帮助，或者在工作上帮你节省了开发时间。在力所能及的情况下，可以支持下`Catchadmin`项目, 非常感谢🙏
+<img src="/img/support.jpeg" width = "200" alt="support"/>
 
 ## 感谢🙏
 > 排名不分先后
