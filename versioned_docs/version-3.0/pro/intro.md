@@ -13,6 +13,12 @@ sidebar_position: 1
 ## 体验地址
 [专业版体验地址](https://pro.catchadmin.com)
 
+## 专业版授权地址
+[专业版授权地址](https://license.catchadmin.com)
+
+## 功能列表
+[专业版授权地址](https://license.catchadmin.com/features)
+
 ## 与开源的区别
 - 前后端项目完全分离
 - 作为付费用户, 将享有优先支持的权利。(但是好像群里小伙伴提出的问题我也是蛮及时的😂)
