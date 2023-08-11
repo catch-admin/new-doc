@@ -17,7 +17,7 @@ sidebar_position: 1
 [专业版授权地址](https://license.catchadmin.com)
 
 ## 功能列表
-[专业版授权地址](https://license.catchadmin.com/features)
+[专业版功能列表](https://license.catchadmin.com/features)
 
 ## 与开源的区别
 - 前后端项目完全分离
