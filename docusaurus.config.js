@@ -116,14 +116,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      announcementBar: {
+      /**announcementBar: {
         id: 'pro',
         content:
           '<a rel="noopener noreferrer" href="https://license.catchadmin.com">🎉专业版本🔥新功能发布,目前优惠价<span style="font-weight:800; font-size: 18px;">「1099」</span>元,可进入授权网站进行购买,感谢支持👏</a> ',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false
-      },
+      },*/
       navbar: {
         title: 'catchadmin',
         logo: {
