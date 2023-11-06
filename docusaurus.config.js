@@ -116,14 +116,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      /**announcementBar: {
+      announcementBar: {
         id: 'pro',
         content:
           '<a rel="noopener noreferrer" href="https://license.catchadmin.com">🎉专业版本🔥新功能发布,目前优惠价<span style="font-weight:800; font-size: 18px;">「1099」</span>元,可进入授权网站进行购买,感谢支持👏</a> ',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: false
-      },*/
+      },
       navbar: {
         title: 'catchadmin',
         logo: {
@@ -141,7 +141,7 @@ const config = {
           { href: 'https://bbs.catchadmin.com', label: '🤝社区', position: 'left' },
           { to: '/api/intro', label: '🏆接口文档', position: 'left' },
           { to: 'disclaimer', label: '🙅‍♂️免责声明', position: 'left' },
-          // { to: 'https://license.catchadmin.com', label: '专业版🔥', position: 'right' },
+          { to: 'https://license.catchadmin.com', label: '专业版🔥', position: 'right' },
           { to: 'cooperate', label: '技术支持💪', position: 'right' },
           { to: 'donate', label: '赞助🙏', position: 'right' },
           {
