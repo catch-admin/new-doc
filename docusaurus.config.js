@@ -201,7 +201,7 @@ const config = {
             items: [
               {
                 label: 'SparkShop 开源商城',
-                href: 'https://spark.pfecms.com'
+                href: 'https://sparkshop.cn'
               },
               {
                 label: '竖豆科技',
